@@ -1,0 +1,43 @@
+Folder PATH listing for volume New Volume
+Volume serial number is 3E72-AFAB
+D:.
+ª   .eslintrc.cjs
+ª   .gitignore
+ª   .prettierrc
+ª   ARCHITECTURE.md
+ª   DEVELOPMENT.md
+ª   directory_tree.txt
+ª   FEATURES.md
+ª   index.html
+ª   my-agent.prompt.md
+ª   package.json
+ª   postcss.config.js
+ª   QUICKSTART.md
+ª   README.md
+ª   tailwind.config.ts
+ª   tsconfig.json
+ª   tsconfig.node.json
+ª   vite.config.ts
+ª   
++---src
+    ª   App.tsx
+    ª   index.css
+    ª   main.tsx
+    ª   
+    +---components
+    ª   +---LayersPanel
+    ª           icons.tsx
+    ª           LayerRow.tsx
+    ª           LayersPanel.tsx
+    ª           LayerTree.tsx
+    ª           styles.ts
+    ª           
+    +---state
+    ª       layersStore.ts
+    ª       
+    +---types
+    ª       layer.ts
+    ª       
+    +---utils
+            treeHelpers.ts
+            

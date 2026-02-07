@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Dark Figma left panel tokens */
+  --color-bg: #2c2c2c; /* panel background */
+  --color-bg-secondary: #2c2c2c; /* header / subtle panels */
+  --color-bg-hover: #333333; /* hover on rows */
+  --color-bg-selected: #393939; /* selected row */
+  --color-border: #232425; /* separators */
+  --color-text-primary: #e6eef6; /* main text */
+  --color-text-secondary: #98a0a6; /* secondary text / icons */
+  --color-text-disabled: #6f7578; /* disabled text */
+  --color-accent: #18a0ff; /* selection accent */
+  --color-accent-hover: #0f87e6; /* accent hover */
+
+  --spacing-xs: 2px;
+  --spacing-sm: 4px;
+  --spacing-md: 8px;
+  --spacing-lg: 16px;
+  --spacing-xl: 24px;
+
+  --icon-size-sm: 16px;
+  --icon-size-md: 20px;
+
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-size-xs: 11px;
+  --font-size-sm: 12px;
+  --font-size-base: 13px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+
+  --border-radius-sm: 2px;
+  --border-radius-md: 4px;
+
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 200ms ease-in-out;
+}
+
+* {
+  box-sizing: border-box;
+  cursor: url("data:image/svg+xml;utf8,\ <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' width='25' height='25'>\ <path fill='%23000000' d='M64 32l320 192-144 32-32 144L64 32z'/>\ </svg>") 4 4, auto;
+  /* cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20" height="20"><path fill="%23000000" d="M108.7,34.4c-28.5,0-51.7,23.2-51.7,51.7v310.3c0,28.5,23.2,51.7,51.7,51.7c28.5,0,51.7-23.2,51.7-51.7V86.1 C160.4,57.6,137.2,34.4,108.7,34.4z M301.5,34.4c-28.5,0-51.7,23.2-51.7,51.7v310.3c0,28.5,23.2,51.7,51.7,51.7 c28.5,0,51.7-23.2,51.7-51.7V86.1C353.2,57.6,330,34.4,301.5,34.4z M403.2,154.1v241.4h66.7V154.1H403.2z M205,205.3v172.8h95.4 V205.3H205z"/></svg>') 5 5, auto; */
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  background-color: #e5e5e5; 
+  cursor: url("https://www.svgrepo.com/show/310716/cursor.svg") 4 4, auto;
+  /* center editing panel background */
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a3b3c;
+  border-radius: 4px;
+  transition: background var(--transition-normal);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4d9bff;
+}
+
+/* Utility bindings for non-Tailwind parts */
+.figma-panel-bg { background-color: var(--color-bg); color: var(--color-text-primary); }
+.figma-panel-secondary { background-color: var(--color-bg-secondary); }
+.figma-border { border-color: var(--color-border); }
+.figma-accent { background-color: var(--color-accent); }
+.figma-text-secondary { color: var(--color-text-secondary); }
+.figma-text-disabled { color: var(--color-text-disabled); }
+
+/* Chevron rotation helper (Tailwind rotate utilities also available) */
+.chevron-rotate {
+  transition: transform var(--transition-fast);
+}
+
+/* Selection animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Disable text selection on interactive elements */
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Right sidebar input styling */
+.right-sidebar-input {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  color: #2b2b2b;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 13px;
+  outline: none;
+  box-shadow: none;
+}
+.right-sidebar-input::placeholder {
+  color: #bfc7cc;
+}
