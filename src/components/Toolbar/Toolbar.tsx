@@ -38,8 +38,8 @@ export const Toolbar: React.FC = () => {
 
   return (
     <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-40">
-      {/* Single joined container to remove spacing between sub-components */}
-      <div className="flex items-center bg-[#1e1e1e] border border-[#2c2c2c] rounded-xl px-1 py-1 h-[48px] shadow-2xl">
+      {/* Added cursor-default */}
+      <div className="flex items-center bg-[#1e1e1e] border border-[#2c2c2c] rounded-xl px-1 py-1 h-[48px] shadow-2xl cursor-default">
         
         {/* Main Tools Section */}
         <div className="flex items-center h-full px-1">
@@ -53,7 +53,8 @@ export const Toolbar: React.FC = () => {
               <div className="flex items-center group h-full">
                 <button
                   onClick={() => setSelectedTool(tool.id)}
-                  className={`p-2 rounded-lg transition-all flex items-center justify-center ${
+                  /* Added cursor-default */
+                  className={`p-2 rounded-lg transition-all flex items-center justify-center cursor-default ${
                     selectedTool === tool.id
                       ? 'bg-[#0c8ce9] text-white'
                       : 'text-[#b3b3b3] hover:bg-[#2c2c2c] hover:text-white'
@@ -64,7 +65,7 @@ export const Toolbar: React.FC = () => {
                 </button>
                 
                 {tool.hasSubmenu && (
-                  <button className="h-full px-0.5 text-[#b3b3b3] hover:text-white transition-colors flex items-center">
+                  <button className="h-full px-0.5 text-[#b3b3b3] hover:text-white transition-colors flex items-center cursor-default">
                     <ChevronDown size={12} strokeWidth={3} />
                   </button>
                 )}
@@ -73,13 +74,14 @@ export const Toolbar: React.FC = () => {
           ))}
         </div>
 
-        {/* Section Divider (The line between the Hand tool and Comments) */}
+        {/* Section Divider */}
         <div className="w-[1px] h-full bg-[#2c2c2c] mx-1" />
 
-        {/* Right Section (Comments & Dev Mode) joined into the same parent */}
+        {/* Right Section */}
         <div className="flex items-center h-full px-1 gap-1">
           <button 
-            className="p-2 text-[#b3b3b3] hover:bg-[#2c2c2c] rounded-lg transition-all flex items-center justify-center"
+            /* Added cursor-default */
+            className="p-2 text-[#b3b3b3] hover:bg-[#2c2c2c] rounded-lg transition-all flex items-center justify-center cursor-default"
             title="Comments (C)"
           >
             <MessageSquare size={20} />
@@ -90,7 +92,8 @@ export const Toolbar: React.FC = () => {
 
           <button 
             onClick={() => setIsDevMode(!isDevMode)}
-            className={`p-2 rounded-lg transition-all flex items-center justify-center ${
+            /* Added cursor-default */
+            className={`p-2 rounded-lg transition-all flex items-center justify-center cursor-default ${
               isDevMode ? 'text-[#10b981]' : 'text-[#b3b3b3] hover:bg-[#2c2c2c]'
             }`}
             title="Dev Mode"

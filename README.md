@@ -1,28 +1,39 @@
-# Figma Layers Panel Replica
+# Figma Layers Panel Replica — README
 
-A comprehensive, production-quality React + TypeScript recreation of Figma's interface, featuring a fully functional sidebar with pages and layers management, responsive toolbar, inspector panel, custom cursor, and advanced zoom controls.
+This repository implements a focused recreation of the Figma Layers Panel UI. The README below follows the requested standard and includes:
 
-![React](https://img.shields.io/badge/React-18-blue?logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-Strict-blue)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-38B2AC?logo=tailwind-css)
-![Zustand](https://img.shields.io/badge/Zustand-State-blueviolet)
-![License](https://img.shields.io/badge/License-MIT-green)
+- The specific reference component chosen
+- A list of external libraries and AI tools used
+- A short Workflow Efficiency Report describing automations used
 
-## ✨ Features Overview
+---
 
-### 🎨 Left Sidebar (Pages & Layers)
-- **Pages Panel** — Switch between different design pages with visual indicators
-- **Layers Panel** — Hierarchical tree view of all design layers with nested groups
-- **Inline Renaming** — Click to rename layers directly in the panel
-- **Visibility Toggle** — Show/hide layers with eye icon
-- **Lock/Unlock** — Protect layers from accidental edits with lock icon
-- **Expand/Collapse** — Navigate nested layer groups with chevron controls
-- **Selection Highlighting** — Visual feedback for selected layers
-- **Resizable Width** — Drag the right edge to adjust sidebar width (180px–360px)
-- **Collapsible View** — Minimize to icon-only view (48px) for more canvas space
-- **Dark Theme** — Professional #2c2c2c dark background matching Figma
+**Reference component / section chosen**
 
-### ⚙️ Toolbar (Center-Bottom)
+- Left Sidebar: "Pages & Layers" panel (the File tab in Figma). This includes the pages list, the hierarchical layers tree, expand/collapse behavior, visibility and lock toggles, inline rename, and resizable/collapsible panel behavior.
+
+**External libraries and AI tools used**
+
+- React 18
+- TypeScript
+- Vite
+- Tailwind CSS
+- Zustand (state management)
+- Lucide React (icons)
+- dnd-kit (installed for future drag/drop)
+- PostCSS / Autoprefixer
+- ESLint / Prettier
+- AI assistance: GitHub Copilot and ChatGPT (used for scaffolding and iterative code suggestions)
+
+**Workflow Efficiency Report (short)**
+
+- Method 1 — Component scaffolding with AI: I used AI-assisted code generation (ChatGPT / GitHub Copilot) to scaffold recursive tree rendering and resize handlers. This saved time on boilerplate and allowed me to focus on higher-quality component design and edge-case handling.
+
+- Method 2 — Centralized design tokens and small, high-quality components: Instead of many tiny, single-purpose files, I consolidated shared styles into `src/styles/tokens.ts` and reduced duplication by keeping the sidebar behavior inside a smaller set of focused components. This reduces overhead and improves maintainability.
+
+---
+
+If you need a more detailed developer guide or a different component extracted for review, tell me which piece to expand and I'll produce it.
 
 ### ⚙️ Toolbar (Center-Bottom)
 - **Drawing Tools** — Move, Frame, Rectangle, Pen, with dropdown submenus
