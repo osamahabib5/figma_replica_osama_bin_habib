@@ -8,8 +8,7 @@ import {
   Square, 
   Eye, 
   EyeOff, 
-  Lock, 
-  MousePointer2 
+  Lock
 } from 'lucide-react'
 
 // Helper to match icons to Figma types seen in your screenshot
